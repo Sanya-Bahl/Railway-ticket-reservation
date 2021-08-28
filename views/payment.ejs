@@ -1,0 +1,31 @@
+
+<%- include('header'); -%>
+<section class="passengers">
+    
+<form action="/success" method="post">
+<h1>Your total amount is:</h1><%= amt %>
+<h2>Choose mode of payment</h2>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="mop" id="flexRadioDefault1" value="Debit/credit Card">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Debit/Credit Card
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="mop" id="flexRadioDefault2"  value="payPal">
+    <label class="form-check-label" for="flexRadioDefault2">
+      payPal
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="mop" id="flexRadioDefault2"  value="E chalan">
+    <label class="form-check-label" for="flexRadioDefault2">
+      E chalan
+    </label>
+  </div>
+  <button type="submit">Pay</button>
+</form>
+</section>
+    
+
+<%- include('footer'); -%>

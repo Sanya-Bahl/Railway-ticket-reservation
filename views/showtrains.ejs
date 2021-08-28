@@ -1,0 +1,27 @@
+<%- include('header'); -%>
+
+<section class="mytrains">
+    <div class="list">
+        <h1>Available Trains</h1>
+        <h3><%= source %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= destination %> </h3>
+        <% for(var i=0; i<newis.length; i++) { %>
+          <form action="/details" method="post">
+               <div class="item">
+                   <p>Train no: <%= newis[i].t_no %></p>
+                   <p>Train name: <%= newis[i].t_name %></p>
+                   <p>Departure: <%= newis[i].Departure %></p>
+                   <p>Arrival: <%= newis[i].Arrival %></p>
+                   <p>price: <%= newis[i].price%></p>
+                   <p>type: <%= newis[i].type %></p>
+                   <p>Available no. of seats: <%= newis[i].Seats %> </p>
+                </div> 
+                <button type="submit" name="submit" value=<%= newis[i].t_no %>>Book</button>
+            </form>
+           
+                 
+           <% } %> 
+        
+    </div>
+</section>
+
+<%- include('footer'); -%>

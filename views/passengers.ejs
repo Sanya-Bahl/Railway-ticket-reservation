@@ -1,0 +1,40 @@
+
+<%- include('header'); -%>
+<section class="passengers">
+    <% for(var i=0; i<newis.length; i++) { %>
+        <% console.log('hi') %>
+        <form action="/delete" method="post">
+           <div class="item">
+           
+           <p style="color: black;">Name: <%= newis[i].name %></p> 
+           <p style="color: black;">Age: <%= newis[i].age %></p>
+           <p style="color: black;">Gender: <%= newis[i].gender %></p>  
+           <button name="checkbox"  value=<%= newis[i]._id %> type="submit">X</button>
+         
+            </div> 
+    
+       </form>
+    <% } %> 
+       <form action="/addDetails" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Enter task" autocomplete="off">
+            <label for="name">Age</label>
+            <input type="text" name="age" placeholder="Enter task" autocomplete="off">
+            <label for="name">Gender</label>
+            <input type="text" name="gender" placeholder="Enter task" autocomplete="off">
+            <button type="submit" name="add">+</button>
+        </form> 
+        <form action="/payment" method="POST">
+        <label for="name">Contact</label>
+        <input type="text" name="pnr" placeholder="Enter task" autocomplete="off"> 
+        <button type="submit" name="pay">Proceed for payment</button>
+</form>
+
+</section>
+    
+
+<%- include('footer'); -%>
+
+
+
+  

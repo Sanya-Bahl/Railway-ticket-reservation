@@ -1,0 +1,37 @@
+
+<%- include('header'); -%>
+<section class="tickets">
+    <% for(var i=0; i<data.length ; i++) { %>
+       
+        
+           <div class="item">
+           <p style="color: black;">From: <%= data[i].source %></p> 
+           <p style="color: black;">To: <%= data[i].destination %></p>
+           <p style="color: black;">Date: <%= data[i].date %></p>
+           <p style="color: black;">Amount: <%= data[i].amt %></p> 
+           <p style="color: black;">Train no.: <%= data[i].train_no %></p>
+           <p style="color: black;">Train name: <%= data[i].train_name %></p> 
+           <p style="color: black;">PNR number: <%= data[i].phone %></p> 
+           <p style="color: black;">No. of passengers: <%= data[i].no_of_passengers %></p>
+           <p style="color: black;">Arrival time: <%= data[i].arrival %></p>   
+           <p style="color: black;">Departure time: <%= data[i].departure %></p>
+           <p style="color: black;">Passengers: </p>
+           <% for(var j=0; j<data[i].passenger.length ; j++) { %>
+            
+               <div class="item" style="background-color: aquamarine;">
+            
+               <p style="color: black;">Name: <%= data[i].passenger[j].name %></p> 
+               <p style="color: black;">Age: <%= data[i].passenger[j].age %></p>
+               <p style="color: black;">Gender: <%= data[i].passenger[j].gender %></p>  
+             
+                </div> 
+                
+        <% } %>      
+     <hr>
+    </div>
+    
+
+
+    <% } %> 
+</section>
+<%- include('footer'); -%>

@@ -1,0 +1,37 @@
+<%- include('header'); -%>
+
+<section class="booking">
+    <div class="ticket">
+    
+
+        <form method="GET" action="/addDetails">
+            <label for="exampleInputEmail1" class="form-label">Train no.</label>
+            <input class="form-control" name="train_no" type="text" value="<%= data1.t_no %>" aria-label="Disabled input example" readonly>
+            <label for="exampleInputEmail1" class="form-label">Train name</label>
+            <input class="form-control" name="train_name" type="text" value="<%= data1.t_name %>" aria-label="Disabled input example"readonly> 
+            <label for="exampleInputEmail1" class="form-label">On</label>
+            <input class="form-control" name="date" type="text" value="<%= data1.date %>" aria-label="Disabled input example"readonly>        
+            <label for="exampleInputEmail1" class="form-label">Source</label>
+            <input class="form-control" name="source" type="text" value="<%= data1.from %>" aria-label="Disabled input example"readonly>
+            <label for="exampleInputEmail1" class="form-label">Destination</label>
+            <input class="form-control" name="destination" type="text" value="<%= data1.to %>" aria-label="Disabled input example"readonly>
+            <label for="exampleInputEmail1" class="form-label">Arrival</label>
+            <input class="form-control" name="arrival" type="text" value="<%= data1.Arrival %>" aria-label="Disabled input example"readonly>
+            <label for="exampleInputEmail1" class="form-label">Departure</label>
+            <input class="form-control" name="departure" type="text" value="<%= data1.Departure %>" aria-label="Disabled input example"readonly>
+            <label for="exampleInputEmail1" class="form-label">No. of passengers</label>
+            <input class="form-control" name="nop" type="text" value="<%= nop %>" aria-label="Disabled input example"readonly>
+            <button type="submit" name="submit" value="<%= ticketid %>" class="btn btn-primary">Continue</button>
+          </form>
+       
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<%- include('footer'); -%>
