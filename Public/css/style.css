@@ -6,9 +6,55 @@
 
 .mainPage
 {
-    background:url('/images/railways.jpg') no-repeat center;
+    background:url('/images/railway1.1.jpg');
     height: 900px;
+    background-size: 100%;
+    overflow: hidden;
 }
+
+.signInBox{
+    width:70%;
+    height: 60%;
+    margin-top: 5px;
+    padding-top: 3px;
+}
+
+.signUpBox{
+    width:600px;
+    height: 100%;
+    margin-top: 5px;
+    padding-top: 3px;
+
+}
+
+.loginPage{
+    background:url('/images/Railway4.1.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.registerPage{
+    background:url('/images/railway5.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.bookTrain{
+    background:url('/images/railway7.1.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+}
+.infoBox{
+    margin-top: 0%;
+    width: 30%;
+    height: 90%;
+    margin-left: 60%;
+    padding-left: 10%;
+}
+
 .time
 {
     height: 54px;

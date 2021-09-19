@@ -1,15 +1,19 @@
 <%- include('headua'); -%>
-<section class="register">
-    <form class="row g-3" method="POST" action="/register">
-      <div class="col-md-2">
-        <label for="inputZip" class="form-label">Name: </label>
-        <input type="text" class="form-control" id="inputZip" name="name">
-      </div>
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" name="username" class="form-control" id="inputEmail4">
+<section class="register registerPage">
+  <form class="row g-3" method="POST" action="/register">
+    <div class="d-flex justify-content-center ml-6 mt-3 mr-0" style="width:400px;">
+      <div class="card text-white bg-info signUpBox ml-5 pl-5">
+        <div class="card-header text-center">SIGN UP</div>
+        <div class="card-body">
+        <div class="col-md-10">
+            <label for="inputZip" class="form-label">Name: </label>
+            <input type="text" class="form-control" id="inputZip" name="name">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-10">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" name="username" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-10">
           <label for="inputPassword4" class="form-label">Password</label>
           <input type="password" name="password" class="form-control" id="inputPassword4">
         </div>
@@ -29,15 +33,18 @@
             <option>Bihar</option>
           </select>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
           <label for="inputZip" class="form-label">Zip</label>
           <input type="text" class="form-control" id="inputZip" name="zip">
         </div>
         
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-dark mt-2">Sign in</button>
         </div>
+        </div>
+      </div>
       </form>
+      
 </section>
 
 

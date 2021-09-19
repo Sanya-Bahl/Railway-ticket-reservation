@@ -1,32 +1,32 @@
 <%- include('header'); -%>
-<section class="mainPage">
+<section class="mainPage bookTrain">
     <form method="POST" action="/search-trains">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">From: </label>
+        <div class=" m-2 col-md-6 ">
+          <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; color: black; font-size:medium;">From: </label>
           <input type="text" class="form-control" name="from" aria-describedby="emailHelp">
          
         </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">To: </label>
+        <div class="m-2 col-md-6">
+            <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; color: black; font-size:medium;">To: </label>
             <input type="text" class="form-control" name="to" aria-describedby="emailHelp">
             
           </div>
           
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Date: </label>
+        <div class="m-2 col-md-6">
+            <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; color: black; font-size:medium;">Date: </label>
             <input type="date" class="form-control" name="date" aria-describedby="emailHelp">
            
         </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">No. of passengers </label>
+        <div class="m-2 col-md-6">
+          <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; color: black; font-size:medium;">No. of passengers </label>
           <input type="number" class="form-control" name="nop" aria-describedby="emailHelp" placeholder="eg.- 1,2,..max(10)">
        </div>
         
-        <div class="mb-3 form-check">
+        <div class="m-2 col-md-6 form-check" style="font-weight: bold; color: black; font-size: medium;">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Search trains</button>
+        <button type="submit" class="btn btn-primary m-2">Search trains</button>
       </form>
 </section>
 

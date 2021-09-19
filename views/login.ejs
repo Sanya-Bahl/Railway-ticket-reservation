@@ -1,7 +1,11 @@
 <%- include('headua'); -%>
 
-<section class="login mainPage">
+<section class="login loginPage">
     <form method="POST" action="/login">
+      <div class="d-flex justify-content-center ml-0 mt-3 mr-0" style="width:400px;">
+      <div class="card text-white bg-info signInBox" style="max-width: 18rem;">
+        <div class="card-header text-center">SIGN IN</div>
+        <div class="card-body">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" name="username" aria-describedby="emailHelp">
@@ -14,8 +18,21 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <button type="submit" class="btn btn-dark btn-lg btn-block text-center">Submit</button>
+        </div>
+      </div>
+    </div>
+      
+      <div class="infoBox">
+      <div class="card border-info mb-3" style="margin-top: 0px;">
+        <div class="card-header">Welcome to Indian Railway</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Info card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    </form>
 </section>
 
 
