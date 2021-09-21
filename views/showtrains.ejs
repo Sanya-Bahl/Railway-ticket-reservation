@@ -2,20 +2,45 @@
 
 <section class="mytrains">
     <div class="list">
-        <h1>Available Trains</h1>
-        <h3><%= source %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= destination %> </h3>
+        <h1 class="d-flex justify-content-center">Available Trains</h1>
+        <h3 class="d-flex justify-content-center"><%= source %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= destination %> </h3>
         <% for(var i=0; i<newis.length; i++) { %>
           <form action="/details" method="post">
-               <div class="item">
-                   <p>Train no: <%= newis[i].t_no %></p>
-                   <p>Train name: <%= newis[i].t_name %></p>
-                   <p>Departure: <%= newis[i].Departure %></p>
-                   <p>Arrival: <%= newis[i].Arrival %></p>
-                   <p>price: <%= newis[i].price%></p>
-                   <p>type: <%= newis[i].type %></p>
-                   <p>Available no. of seats: <%= newis[i].Seats %> </p>
-                </div> 
-                <button type="submit" name="submit" value=<%= newis[i].t_no %>>Book</button>
+            <div class="item">
+            <table class="table table-success table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="col">Train no:</th>
+                            <th scope="col"><%= newis[i].t_no %></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Train name:</th>
+                            <th scope="col"><%= newis[i].t_name %></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Departure:</th>
+                            <th scope="col"><%= newis[i].Departure %></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Arrival:</th>
+                            <th scope="col"><%= newis[i].Arrival %></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">price:</th>
+                            <th scope="col"><%= newis[i].price%></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">type:</th>
+                            <th scope="col"><%= newis[i].type %></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Available no. of seats:</th>
+                            <th scope="col"><%= newis[i].Seats %></th>
+                        </tr>          
+                    </tbody>
+                </table>
+            </div>          
+                <button type="submit" name="submit" class="btn btn-dark mt-0 m-1" value=<%= newis[i].t_no %>>Book</button>
             </form>
            
                  

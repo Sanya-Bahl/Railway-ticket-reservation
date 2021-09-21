@@ -20,6 +20,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 mongoose.connect('mongodb://localhost:27017/Railwaydb', {useNewUrlParser: true, useUnifiedTopology: true});
+//checking moongo connection
+const db=mongoose.connection;
+db.on('error', console.error.bind(console,"error connecting to db"));
+db.once("open",function(){
+    console.log("successfullly connected to mongodb");
+});
 mongoose.set("useCreateIndex", true);
 const userSchema= new mongoose.Schema({
     username: String,
@@ -68,17 +74,18 @@ const ticketSchema= new mongoose.Schema({
     status: String,
     passenger: [passengerSchema]
 })
+
 const ticketdb=mongoose.model('ticket', ticketSchema);
 const passengerdb=mongoose.model('passenger',passengerSchema);
-
 const traindb=mongoose.model('trains', trainSchema);
+
 const i1= new traindb({
     t_no: 1234,
     t_name: "Shatabdi express",
     Departure: "7:00",
     Arrival: "12:00",
     Seats: 3,
-    date: new Date("2021-08-21"),
+    date: new Date("08/21/2021"),
     from: "Delhi",
     to: "Mumbai",
     price: 1200,
@@ -157,14 +164,27 @@ const i7= new traindb({
     type: "AC"
 })
 
-var mytrains=[i1, i2, i3,i4,i5,i6,i7];
-// traindb.insertMany(mytrains, function(err)
-// {
-//     if(err)
-//     console.log(err)
-//     else
-//     console.log("Added successfully")
-// })
+const i8= new traindb({
+    t_no: 1264,
+    t_name: "Humsafar express",
+    Departure: "20:00",
+    Arrival: "24:00",
+    Seats: 3,
+    date: new Date("2021-08-24"),
+    from: "Patna",
+    to: "Mumbai",
+    price: 2500,
+    type: "AC"
+})
+
+var mytrains=[i1, i2, i3,i4,i5,i6,i7,i8];
+     traindb.insertMany(mytrains, function(err)
+    {
+    if(err)
+     console.log(err)
+     else
+     console.log("Added successfully")
+})
 app.get('/',(req,res)=>{
     if(req.isAuthenticated())
     {
