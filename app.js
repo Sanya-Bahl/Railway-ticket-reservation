@@ -177,14 +177,14 @@ const i8= new traindb({
     type: "AC"
 })
 
-var mytrains=[i1, i2, i3,i4,i5,i6,i7,i8];
-     traindb.insertMany(mytrains, function(err)
-    {
-    if(err)
-     console.log(err)
-     else
-     console.log("Added successfully")
-})
+//var mytrains=[i1, i2, i3,i4,i5,i6,i7,i8];
+//     traindb.insertMany(mytrains, function(err)
+//    {
+//    if(err)
+//     console.log(err)
+//     else
+//     console.log("Added successfully")
+//})
 app.get('/',(req,res)=>{
     if(req.isAuthenticated())
     {
