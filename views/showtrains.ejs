@@ -4,49 +4,60 @@
     <div class="list">
         <h1 class="d-flex justify-content-center">Available Trains</h1>
         <h3 class="d-flex justify-content-center"><%= source %> <i class="fa fa-arrow-right" aria-hidden="true"></i> <%= destination %> </h3>
-        <% for(var i=0; i<newis.length; i++) { %>
+        
+         <% for(var i=0; i<newis.length; i++) { %>
           <form action="/details" method="post">
-            <div class="item">
             <table class="table table-success table-striped">
+            <div class="item">
                     <tbody>
                         <tr>
-                            <th scope="col">Train no:</th>
-                            <th scope="col"><%= newis[i].t_no %></th>
+                            <th scope="row">1</th>
+                            <td>Train No:</td>
+                            <td><%= newis[i].t_no %></td>
+                            
                         </tr>
                         <tr>
-                            <th scope="col">Train name:</th>
-                            <th scope="col"><%= newis[i].t_name %></th>
+                            <th scope="row">2</th>
+                            <td>Train Name:</td>
+                            <td><%= newis[i].t_name %></td>
                         </tr>
                         <tr>
-                            <th scope="col">Departure:</th>
-                            <th scope="col"><%= newis[i].Departure %></th>
+                            <th scope="row">3</th>
+                            <td>Departure:</td>
+                            <td><%= newis[i].Departure %></td>
                         </tr>
                         <tr>
-                            <th scope="col">Arrival:</th>
-                            <th scope="col"><%= newis[i].Arrival %></th>
+                            <th scope="row">4</th>
+                            <td>Arrival:</td>
+                            <td><%= newis[i].Arrival %></td>
                         </tr>
                         <tr>
-                            <th scope="col">price:</th>
-                            <th scope="col"><%= newis[i].price%></th>
+                            <th scope="row">5</th>
+                            <td>Price:</td>
+                            <td><%= newis[i].price%></td>
                         </tr>
                         <tr>
-                            <th scope="col">type:</th>
-                            <th scope="col"><%= newis[i].type %></th>
+                            <th scope="row">6</th>
+                            <td>type:</td>
+                            <td><%= newis[i].type %></td>
                         </tr>
                         <tr>
-                            <th scope="col">Available no. of seats:</th>
-                            <th scope="col"><%= newis[i].Seats %></th>
+                            <th scope="row">7</th>
+                            <td>Available no. of seats:</td>
+                            <td><%= newis[i].type %></td>
                         </tr>          
                     </tbody>
-                </table>
-            </div>          
+               
+            </div> 
+        </table>         
                 <button type="submit" name="submit" class="btn btn-dark mt-0 m-1" value=<%= newis[i].t_no %>>Book</button>
             </form>
-           
+        
                  
            <% } %> 
         
     </div>
+
 </section>
 
 <%- include('footer'); -%>
