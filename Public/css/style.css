@@ -47,10 +47,75 @@
     background-size: 100%;
     overflow: hidden;
 }
+
+.passengerDetails{
+    background:url('/images/railway9.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+
+}
+
+.levelDetails {
+    width:180px;
+    clear:left;
+    text-align:left;
+    padding-right:10px;
+}
+
+.inputDetails, .levelDetails {
+    float:left;
+}
+
+.buttonAdd{
+    width: 10%;
+    height: 10%;
+    float: right;
+    position: absolute;
+    right:    7%;
+    bottom:   6%;
+}
+
+.buttonCross{
+    width: 10%;
+    height: 10%;
+}
+
+.inputDetails{
+    width:90%
+}
+
+.abc{
+    display: flex;
+    flex-direction: row;
+}
+
+.individualDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-top{
+    align-self: flex-start;
+}
+
+.cardDetails{
+    display:block;    
+    margin-left: 20%;
+    margin-right: auto;
+    /*margin: 0 auto; /* Added */
+    /*float: none;  Added */
+    /*margin-bottom: 10px;  Added */
+}
+
+.addImage{
+    size: 12%;
+}
 .infoBox{
     margin-top: 0%;
     width: 30%;
     height: 90%;
+    margin-top: 1%;
     margin-left: 60%;
     padding-left: 10%;
 }

@@ -94,7 +94,7 @@ const i1= new traindb({
 const i2= new traindb({
     t_no: 1254,
     t_name: "Rajdhani express",
-    Departure: "17:00",
+    Departure: "17:00", 
     Arrival: "21:00",
     Seats: 3,
     date: new Date("2021-08-24"),
