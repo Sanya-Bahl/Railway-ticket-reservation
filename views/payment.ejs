@@ -1,31 +1,39 @@
-
 <%- include('header'); -%>
-<section class="passengers">
-    
+<section class="passengers paymentPage">    
 <form action="/success" method="post">
-<h1>Your total amount is:</h1><%= amt %>
-<h2>Choose mode of payment</h2>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="mop" id="flexRadioDefault1" value="Debit/credit Card">
-    <label class="form-check-label" for="flexRadioDefault1">
-      Debit/Credit Card
-    </label>
+  <div class="d-flex justify-content-center ml-0 mt-3 mr-0" style="width:500px;">
+    <div class="card text-white bg-info signInBox" style="width: 23rem;">
+      <div class="card-header text-center paymentHeader">PAYMENT</div>
+      <div class="card-body">
+      <div class="mb-3">
+      <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black; " >Your total amount is: <%= amt %></h3>
+      <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black;" >Choose mode of payment</h3>
+      <div class="form-check">
+        <input class="form-check-input mt-4" type="radio" name="mop" id="flexRadioDefault1" value="Debit/credit Card" style="font-size:larger">
+        <label class="form-check-label mt-2" for="flexRadioDefault1" style="font-size:larger; color: black;">
+        Debit/Credit Card 
+        <i style="color:brown; margin-left: 5px;" class="fas fa-credit-card fa-2x"></i>
+      </label>
+      </div>
+      <div class="form-check">
+         <input class="form-check-input mt-4" type="radio" name="mop" id="flexRadioDefault2"  value="payPal" style="font-size:larger">
+         <label class="form-check-label mt-2" for="flexRadioDefault2" style="font-size: larger;color: black; ">
+         payPal 
+         <i style="color: blue; margin-left: 98px;" class="fab fa-paypal fa-2x"></i>
+        </label>
+       </div>
+      <div class="form-check">
+         <input class="form-check-input mt-4" type="radio" name="mop" id="flexRadioDefault2"  value="E chalan" style="font-size:larger">
+         <label class="form-check-label mt-2" for="flexRadioDefault2" style="font-size: larger; color: black;">
+         E chalan
+         <i style="color:peru;  margin-left: 83px;" class="fas fa-file-invoice-dollar fa-2x"></i>
+         </label>
+      </div>
+      <button type="submit" class="btn btn-dark btn-lg btn-block text-center mt-5 col-sm-4">Pay</button>
+    </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="mop" id="flexRadioDefault2"  value="payPal">
-    <label class="form-check-label" for="flexRadioDefault2">
-      payPal
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="mop" id="flexRadioDefault2"  value="E chalan">
-    <label class="form-check-label" for="flexRadioDefault2">
-      E chalan
-    </label>
-  </div>
-  <button type="submit">Pay</button>
+</div>
 </form>
 </section>
     
-
 <%- include('footer'); -%>

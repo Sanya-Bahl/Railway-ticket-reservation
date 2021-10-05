@@ -56,6 +56,19 @@
 
 }
 
+.paymentPage{
+    background: url('/images/Railway10.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.paymentHeader{
+    color: black;
+    font-size:larger;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
 .levelDetails {
     width:180px;
     clear:left;
