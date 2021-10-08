@@ -63,6 +63,23 @@
     overflow: hidden;
 }
 
+.ticketImage{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('/images/Railway4.2.jpg') no-repeat;
+    background-position-x: center;
+    background-size:cover;
+    
+   
+}
+
+.message{
+   background: url('/images/message.jpg') no-repeat;
+   background-position-x: right;
+   background-position-y: top;
+   background-size: 15% 80%;
+   margin-top: 0%;
+}
+
+
 .paymentHeader{
     color: black;
     font-size:larger;
@@ -145,3 +162,35 @@
     font-size: 1.4rem;
     padding-top: 8px;
 }
+
+.myTicketHeader{
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: black;
+}
+
+.headerText1{
+    margin-left: 18%;
+    margin-top: 2px;
+    font-size:x-large;
+}
+
+.headerText2{
+    margin-left: 15%;
+    margin-top: 2px;
+    font-size:x-large;
+}
+
+.myTicketBody{
+    font-size: medium;
+}
+
+.line-2{
+    border-top: 1px solid black;
+}
+
+.item > p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+

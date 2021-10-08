@@ -3,31 +3,61 @@
 <section class="tickets">
     <% for(var i=0; i<data.length ; i++) { %>
        
-        
-           <div class="item">
-           <p style="color: black;">From: <%= data[i].source %></p> 
-           <p style="color: black;">To: <%= data[i].destination %></p>
-           <p style="color: black;">Date: <%= data[i].date %></p>
-           <p style="color: black;">Amount: <%= data[i].amt %></p> 
-           <p style="color: black;">Train no.: <%= data[i].train_no %></p>
-           <p style="color: black;">Train name: <%= data[i].train_name %></p> 
-           <p style="color: black;">PNR number: <%= data[i].phone %></p> 
-           <p style="color: black;">No. of passengers: <%= data[i].no_of_passengers %></p>
-           <p style="color: black;">Arrival time: <%= data[i].arrival %></p>   
-           <p style="color: black;">Departure time: <%= data[i].departure %></p>
-           <p style="color: black;">Passengers: </p>
-           <% for(var j=0; j<data[i].passenger.length ; j++) { %>
+           <div class="item m-2 border border-dark border-1.5 ticketImage">
+            <div style="background-color:rgb(134, 35, 226)">
+                <p class="myTicketHeader">
+                   <span class="headerText1">शुभ यात्रा</span>  
+                   <i style="color:brown; margin-left: 23%; margin-top: 4px;" class="fas fa-subway fa-2x"></i> 
+                   <span class="headerText2">Happy Journey</span> 
+                </p>
+                <hr>
+            </div>
             
-               <div class="item" style="background-color: aquamarine;">
+            <div class="myTicketBody message">
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> From: </span> <span> <%= data[i].source %> </span>
+                <span style="margin-left: 50%; font-family:'Times New Roman', Times, serif; font-size: large"> To:</span> <span> <%= data[i].destination %> </span>
+              </p>
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Date: </span> <span> <%= data[i].date %> </span>
+              </p>
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Amount: </span> <span> <%= data[i].amt %> </span>
+              </p>   
+              <p style="color: black;">
+               <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Train No.: </span> <span> <%= data[i].train_no %> </span>
+              </p>
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Train Name:</span> <span> <%= data[i].train_name %> </span>
+              </p> 
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;">PNR Number:</span> <span><%= data[i].phone %> </span>
+              </p> 
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> No. of passengers: </span> <span> <%= data[i].no_of_passengers %></span>
+              </p>
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Arrival time:</span> <span> <%= data[i].arrival %> </span>
+              </p>   
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Departure time:</span> <span> <%= data[i].departure %> </span>
+              </p>
+              <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Passengers:</span> 
+              </p>
+              <% for(var j=0; j<data[i].passenger.length ; j++) { %>
             
-               <p style="color: black;">Name: <%= data[i].passenger[j].name %></p> 
-               <p style="color: black;">Age: <%= data[i].passenger[j].age %></p>
-               <p style="color: black;">Gender: <%= data[i].passenger[j].gender %></p>  
-             
-                </div> 
+               <div class="item" style="background-color:antiquewhite;"> 
+               <p style="color: black; height: 35px;" class="border border-dark border-1.5">
+                <span style="margin-left: 2%;"> Name: </span> <span> <%= data[i].passenger[j].name %> </span>
+                <span style="margin-left: 20%;"> Age: </span> <span> <%= data[i].passenger[j].age %> </span>
+                <span style="margin-left: 20%;"> Gender: </span> <span> <%= data[i].passenger[j].gender %> </span>
+               </p class="line-2">  
+               </div> 
+         
                 
-        <% } %>      
-     <hr>
+        <% } %>    
+      </div>  
     </div>
     
 
