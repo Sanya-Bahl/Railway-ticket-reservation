@@ -67,8 +67,6 @@
     background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('/images/Railway4.2.jpg') no-repeat;
     background-position-x: center;
     background-size:cover;
-    
-   
 }
 
 .message{
@@ -79,6 +77,25 @@
    margin-top: 0%;
 }
 
+.showtrainsImg{
+    background: url('/images/railways1.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.table{
+    background-color: beige;
+}
+
+/*
+.message2{
+    background: url('/images/message2.png') no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    background-size: 15% 80%;
+    margin-top: 0%;
+}*/
 
 .paymentHeader{
     color: black;
