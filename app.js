@@ -367,7 +367,6 @@ app.post('/register',(req,res)=>
 {
     console.log(req.body.username);
     User.register({username: req.body.username,
-        password:req.body.password,
         address: req.body.address,
         city: req.body.city,
         state: req.body.state,
