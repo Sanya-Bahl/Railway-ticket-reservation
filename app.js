@@ -19,7 +19,7 @@ app.use(session({
   }));
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect('mongodb://localhost:27017/Railwaydb', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/Railwaydb', {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false});
 //checking moongo connection
 const db=mongoose.connection;
 db.on('error', console.error.bind(console,"error connecting to db"));
@@ -270,7 +270,7 @@ app.post('/details',(req,res)=>
         else
         {
             const amt=data.price*parseInt(nop);
-            const t1= new ticketdb({
+            var t1= new ticketdb({
                   no_of_passengers: nop,
                   source: data.from,
                   destination: data.to,
@@ -414,17 +414,20 @@ app.post('/cancel',(req,res)=>
 {
     ticketdb.findOneAndUpdate({_id:req.body.submit},{$set:{status:"Cancelled"}}, {new: true},(err,data)=>
     {
+       
         if(err)
         console.log(err)
         else
         {
          alert('Ticket cancelled successfully!')
-         traindb.findOneAndUpdate({train_no:data.t_no},{$inc:{Seats: +data.no_of_passengers}},{new:true},(err,data1)=>
+         console.log(data.train_no);
+         traindb.findOneAndUpdate({t_no:data.train_no},{$inc:{Seats: +data.no_of_passengers}},{new:true},(err,data1)=>
          {
              if(err)
              console.log(err)
              else
              console.log('updated')
+             console.log(data1);
          })
          res.redirect('/pnr');
         }

@@ -8,8 +8,9 @@
         <p>Source: <%= data.source %></p>
         <p>Destination: <%= data.destination %></p>
         <p>Status: <%= data.status %></p>
+        <p>id: <%= data._id %></p>
      </div> 
     <form action="/cancel" method="post">
-        <button type="submit" value="data._id">Cancel ticket</button>
+        <button type="submit" value="<%= data._id %>" name="submit">Cancel ticket</button>
     </form>
  <%- include('footer'); -%>
