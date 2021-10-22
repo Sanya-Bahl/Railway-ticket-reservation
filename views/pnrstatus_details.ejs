@@ -1,16 +1,32 @@
 <%- include('header'); -%>
 
-    <div class="item">
-        <p>Train no: <%= data.train_no %></p>
-        <p>Train name: <%= data.train_name %></p>
-        <p>Departure: <%= data.departure %></p>
-        <p>Arrival: <%= data.arrival %></p>
-        <p>Source: <%= data.source %></p>
-        <p>Destination: <%= data.destination %></p>
-        <p>Status: <%= data.status %></p>
-        <p>id: <%= data._id %></p>
+<section class="pnrPage">
+    <div class="item itemTable">
+        <p class="line-1 headingInfo">TRAIN STATUS</p>
+        <p>
+           <span style="margin-left: 1%;" class="pnrText"> Train no: <%= data.train_no %> </span>
+           <span style="margin-left: 30%;" class="pnrText"> Train name: <%= data.train_name %> </span> 
+        </p>
+    
+        <p>
+           <span style="margin-left: 1%;" class="pnrText"> Departure: <%= data.departure %> </span>
+           <span style="margin-left: 32.8%;"class="pnrText"> Arrival: <%= data.arrival %> </span>
+        </p>
+        
+        <p>
+           <span style="margin-left: 1%;" class="pnrText">  Source: <%= data.source %> </span>
+           <span style="margin-left: 29.7%;" class="pnrText"> Destination: <%= data.destination %> </span>
+        </p>
+        
+        <p>
+            <span style="margin-left: 1%;" class="pnrText"> Status: <%= data.status %></span>
+            <span style="margin-left: 30%;" class="pnrText">id: <%= data._id %></span>
+        </p>
+       
      </div> 
     <form action="/cancel" method="post">
-        <button type="submit" value="<%= data._id %>" name="submit">Cancel ticket</button>
+        <button type="submit" value="<%= data._id %>"  name="submit" style="margin-left:15%;" class="btn btn-dark mt-2 prnText">Cancel ticket</button>
     </form>
+
+</section>
  <%- include('footer'); -%>

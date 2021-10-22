@@ -48,6 +48,21 @@
     overflow: hidden;
 }
 
+.bookingPage{
+    background:url('/images/railway8.1.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.bookbox{
+    background-color: aliceblue;
+    width: 70%;
+    margin: auto;
+    margin-top: 7%;
+    border: 2px solid black;
+}
+
 .passengerDetails{
     background:url('/images/railway9.jpg') no-repeat;
     height: 900px;
@@ -202,6 +217,19 @@
     font-size: medium;
 }
 
+.line-1{
+    border-bottom: 1px solid black;
+}
+
+.headingInfo{
+    font-size:x-large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    background-color: #212529
+}
+
 .line-2{
     border-top: 1px solid black;
 }
@@ -210,4 +238,63 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+select#states {
+    height: 2.2rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: .375rem .75rem;
+}
+
+.ml{
+    margin-left: 40%;
+}
+
+.mlInfo{
+    margin-left: 0.4rem;
+}
+.sameLine{
+    display: flex;
+    justify-content: space-between;
+
+}
+.form-control{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/*pnr details*/
+.pnrPage{
+    background:url('/images/railway6.2.jpg') no-repeat;
+    height: 900px;
+    background-size: 100%;
+    overflow: hidden;
+
+}
+.itemTable{
+    border: 2px solid black;
+    background-color: rgb(241, 236, 236);
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+}
+
+.pnrText{
+    font-size: large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 80;
+}
+
 
