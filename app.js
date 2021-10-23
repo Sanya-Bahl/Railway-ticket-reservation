@@ -69,6 +69,8 @@ const ticketSchema= new mongoose.Schema({
     destination: String,
     date: String,
     amt: Number,
+    Departure: String,
+    Arrival: String,
     Phone: Number,
     userid: String,
     status: String,
@@ -278,7 +280,9 @@ app.post('/details',(req,res)=>
                   userid: req.user._id,
                   amt:amt,
                   train_no: data.t_no,
-                  train_name: data.t_name
+                  train_name: data.t_name,
+                  Departure: data.Departure,
+                  Arrival: data.Arrival,
             })
                    t1.save();
                    res.render("booking",{data1:data,ticketid: t1._id, nop: t1.no_of_passengers,username:req.user.name});
@@ -411,27 +415,39 @@ app.post('/pnr',(req,res)=>
 })
 app.post('/cancel',(req,res)=>
 {
-    ticketdb.findOneAndUpdate({_id:req.body.submit},{$set:{status:"Cancelled"}}, {new: true},(err,data)=>
+    
+    ticketdb.findOne({_id:req.body.submit},(err,data)=>
     {
-       
         if(err)
         console.log(err)
-        else
+        if(data.status=="Cancelled")
+        alert('Your ticket has already been cancelled.');
+        else if(data.status!="Cancelled")
         {
-         alert('Ticket cancelled successfully!')
-         console.log(data.train_no);
-         traindb.findOneAndUpdate({t_no:data.train_no},{$inc:{Seats: +data.no_of_passengers}},{new:true},(err,data1)=>
-         {
-             if(err)
-             console.log(err)
-             else
-             console.log('updated')
-             console.log(data1);
-         })
-         res.redirect('/pnr');
+            console.log('Your ticket has already been cancelled.');
+            ticketdb.findOneAndUpdate({_id:req.body.submit},{$set:{status:"Cancelled"}}, {new: true},(err,data)=>
+            {
+               
+                if(err)
+                console.log(err)
+                else
+                {
+                 
+                 
+                 traindb.findOneAndUpdate({t_no:data.train_no},{$inc:{Seats: +data.no_of_passengers}},{new:true},(err,data1)=>
+                 {
+                     if(err)
+                     console.log(err)
+                     
+                 })
+                 
+                }
+               
+            })
         }
-       
+        res.redirect('/pnr');
     })
+
 })
 app.get('/my-tickets',(req,res)=>
 {
@@ -468,6 +484,23 @@ app.post('/success',(req,res)=>
 });
   alert('Your ticket has been booked successfully!')
   res.redirect('/');  
+})
+app.get('/trains',(req,res)=>
+{
+    traindb.find({},(err,data)=>
+    {
+        if(err)
+        console.log(err);
+        else
+        {
+            res.render('showAll',{newis:data,username:req.user.name});
+        }
+    })
+})
+app.get('/logout',(req,res)=>
+{
+    req.logout()
+    res.redirect('/')
 })
 app.listen(3000,()=>
 {

@@ -1,0 +1,51 @@
+<%- include('header'); -%>
+
+<section class="mytrains showtrainsImg">
+    <div class="list" align="center">
+        <h1 style="position: relative; top:1rem;">Available Trains</h1>
+        
+        <table class="table" style="width: 80%; margin-top: 30px;" >
+            <thead align="center">
+              <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Train number</th>
+                <th scope="col">Train name</th>
+                <th scope="col">Source</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Departure</th>
+                <th scope="col">Arrival</th>
+                <th scope="col">Price</th>
+                <th scope="col">Type</th>
+                <th scope="col">Seats available</th>
+               
+              </tr>
+            </thead>
+            <tbody align="center">
+        <% for(var i=0; i<newis.length; i++) { %>
+          <form action="/details" method="post">
+        
+                <tr>
+                    <th scope="row"><%= i+1 %></th>
+                    <td><%= newis[i].t_no %></td>
+                    <td><%= newis[i].t_name %></td>
+                    <td><%= newis[i].from %></td>
+                    <td><%= newis[i].to %></td>
+                    <td><%= newis[i].Departure %></td>
+                    <td><%= newis[i].Arrival %></td>
+                    <td><%= newis[i].price%></td>
+                    <td><%= newis[i].type %></td>
+                    <td><%= newis[i].Seats %></td>
+                   
+                  </tr>
+                   
+                
+            </form>
+                 
+           <% } %> 
+        </tbody>
+    </table>
+        
+    </div>
+</section>
+
+<%- include('footer'); -%>
