@@ -88,10 +88,13 @@
    background: url('/images/message.jpg') no-repeat;
    background-position-x: right;
    background-position-y: top;
-   background-size: 15% 80%;
+   background-size: 15% 100%;
    margin-top: 0%;
 }
 
+.myTicketBody > p{
+    margin-bottom: 1rem;;
+}
 .showtrainsImg{
     background: url('/images/railways1.jpg') no-repeat;
     height: 900px;

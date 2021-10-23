@@ -16,29 +16,35 @@
             <div class="myTicketBody message">
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> From: </span> <span> <%= data[i].source %> </span>
-                <span style="margin-left: 50%; font-family:'Times New Roman', Times, serif; font-size: large"> To:</span> <span> <%= data[i].destination %> </span>
+                <span style="margin-left: 11%; font-family:'Times New Roman', Times, serif; font-size: large"> To:</span> <span> <%= data[i].destination %> </span>
+                <span style="margin-left: 15%; font-family: 'Times New Roman', Times, serif; font-size: large;"> Train No.: </span> <span> <%= data[i].train_no %> </span>
+                <span style="margin-left: 15%; font-family: 'Times New Roman', Times, serif; font-size: large;"> Train Name:</span> <span> <%= data[i].train_name %> </span>
+
               </p>
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Date: </span> <span> <%= data[i].date %> </span>
               </p>
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Amount: </span> <span> <%= data[i].amt %> </span>
-              </p>   
+              </p>
+              
               <p style="color: black;">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Arrival time:</span> <span> <%= data[i].arrival %> </span>
+              </p>   
+             <!-- <p style="color: black;">
                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Train No.: </span> <span> <%= data[i].train_no %> </span>
               </p>
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Train Name:</span> <span> <%= data[i].train_name %> </span>
-              </p> 
+              </p>--> 
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;">PNR Number:</span> <span><%= data[i].phone %> </span>
               </p> 
+
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> No. of passengers: </span> <span> <%= data[i].no_of_passengers %></span>
               </p>
-              <p style="color: black;">
-                <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Arrival time:</span> <span> <%= data[i].arrival %> </span>
-              </p>   
+              
               <p style="color: black;">
                 <span style="font-family: 'Times New Roman', Times, serif; font-size: large;"> Departure time:</span> <span> <%= data[i].departure %> </span>
               </p>
