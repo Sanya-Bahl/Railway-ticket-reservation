@@ -10,6 +10,7 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.93;
 }
 .nav-link:hover
 {
@@ -59,6 +60,7 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.89;
 }
 
 .registerPage{
@@ -66,13 +68,16 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.83;
 }
+
 
 .bookTrain{
     background:url('/images/railway7.1.jpg') no-repeat;
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.87;
 }
 
 .bookingPage{
@@ -80,6 +85,7 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.88;
 }
 
 .bookbox{
@@ -95,6 +101,7 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.9;
 
 }
 
@@ -103,6 +110,7 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.85;
 }
 
 .ticketImage{
@@ -127,6 +135,7 @@
     height: 900px;
     background-size: 100%;
     overflow: hidden;
+    opacity: 0.9;
 }
 
 .table{
