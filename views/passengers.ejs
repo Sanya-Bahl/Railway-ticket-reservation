@@ -1,5 +1,8 @@
 <%- include('header'); -%>
 <section class="passengers passengerDetails abc">
+  
+    <h1 style="position: relative; left: 49rem; width: auto; font-weight: bold; color: black;">Passenger details</h1>
+
     <div>
     <% for(var i=0; i<newis.length; i++) { %>
         <% console.log('hi') %>
@@ -24,7 +27,7 @@
     <% } %> 
     </div>
 
-    <div class="card border-primary sticky-top cardDetails" style="max-width: 20rem; margin-top: 2rem;">
+    <div class="card border-primary sticky-top cardDetails" style="max-width: 20rem; margin-top:9rem;">
      <div class="card-header">Details</div>
      <div class="card-body text-primary">
        <form action="/addDetails" method="post" >
@@ -40,8 +43,8 @@
         </form> 
     </div>
 </div>
-        <form action="/payment" method="POST" style="margin-top: 18rem; position: relative; right: 20rem;">
-        <label for="name" class="mt-1 levelDetails" style="font-size: 1.5rem; font-weight: bold; color: rgb(17, 16, 16);">Contact</label>
+        <form action="/payment" method="POST" style="margin-top: 24rem; position: relative; right: 17rem;">
+        <label for="name" class="mt-1 levelDetails" style="font-size: 1.5rem; font-weight: bold; color: rgb(255, 251, 251);">Contact</label>
         <input type="text" name="pnr" placeholder="Enter task" autocomplete="off" class="inputDetails"> 
         <button type="submit" name="pay" class="btn btn-primary mt-2 myButton" style="background-color: black;">Proceed for payment</button>
     
